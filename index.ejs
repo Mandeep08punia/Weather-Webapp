@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Application</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+   
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <form class="form-inline" action="/" method="post">
+            <div class="form-group">
+                <input name="city" type="text" class="form-control" placeholder="Enter City Name" required>
+              </div>
+              <button type="submit" class="btn btn-success" value="Get Weather"> Weather App</button>
+          </form>
+        </div> 
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+              <% if(weather !== null){ %>
+                <div class="weather">
+                    <div class="current">
+                        <div class="info">
+                            <div>&nbsp;</div>
+                            <div class="city"><span>City:</span> <%= weather.name %></div>
+                            <div class="temp"><%= weather.main.temp %> &deg; <small>F</small></div>
+                            <div class="wind">
+                                <svg version="1.1" id="wind" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   viewBox="0 0 300.492 300.492" style="enable-background:new 0 0 300.492 300.492;" xml:space="preserve">
+              
+                                <span><%= weather.wind.speed %> km/h</span>
+                                </svg>
+                              </div>
+                           <div>&nbsp;</div>
+                        </div>
+                        <div class="icon">
+                            <span class="wi-day-sunny"></span>
+                        </div>
+                </div>
+              <% } %>
+          </div>
+          <% if(error !== null){ %>
+            <p><%= error %></p>
+          <% } %>
+      </div>
+  </body>
+</html>
