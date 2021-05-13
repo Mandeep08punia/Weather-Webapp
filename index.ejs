@@ -2,10 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Weather Application</title>
-    
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-   
+    <script src="jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
   </head>
   <body>
     <div class="container">
@@ -14,7 +16,7 @@
             <div class="form-group">
                 <input name="city" type="text" class="form-control" placeholder="Enter City Name" required>
               </div>
-              <button type="submit" class="btn btn-success" value="Get Weather"> Weather App</button>
+              <button type="submit" class="btn btn-success" value="Get Weather">Get Weather</button>
           </form>
         </div> 
         <div class="row">
@@ -29,7 +31,6 @@
                             <div class="wind">
                                 <svg version="1.1" id="wind" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                    viewBox="0 0 300.492 300.492" style="enable-background:new 0 0 300.492 300.492;" xml:space="preserve">
-              
                                 <span><%= weather.wind.speed %> km/h</span>
                                 </svg>
                               </div>
